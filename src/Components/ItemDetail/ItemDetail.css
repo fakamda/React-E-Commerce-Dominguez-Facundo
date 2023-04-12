@@ -1,0 +1,14 @@
+.itemDetail{
+    height: 600px;
+    width: 1000px;
+    border-radius: 6px;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    margin: 70px;
+    background: rgb(68, 64, 87);
+    background: linear-gradient(40deg, rgb(42, 37, 59) 10%, rgb(72, 62, 148) 70%, rgb(112, 76, 211) 97%);
+}
+
+.itemDetail img {
+    width: 500px;
+    border-radius: 0px 6px 6px 0px ;
+}

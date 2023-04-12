@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Gothic+A1:wght@100;300;400&family=Rubik+Iso&family=Silkscreen&family=VT323&display=swap');
+
+
+.fondo {
+    background-image: url(../assets/sw\ 2.png);
+    height: 100vh;
+    width: 99,8%;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+}
+
+.texto {
+    font-family: 'Silkscreen', cursive;
+    position: relative;
+    top: 25%;
+    right: 20%;
+}
+
+.fondo p {
+    font-family: 'Gothic A1', sans-serif;
+    display: flex;
+    width: 400px;
+    position: relative;
+    top: 27%;
+    left: 20%;
+}
+
+.boton{
+    position: relative;
+    font-family: 'Gothic A1', sans-serif;
+    top: 32%;
+    right: 20%;
+    border-radius: 6px; 
+}
+
+.boton2{
+    position: relative;
+    font-family: 'Gothic A1', sans-serif;
+    top: 32%;
+    right: 20%;  
+}

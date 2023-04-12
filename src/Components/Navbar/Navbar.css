@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Gothic+A1:wght@100;300;400&family=Rubik+Iso&family=Silkscreen&family=VT323&display=swap');
+
+
+.header {
+    height: 56px;
+    background-image: url('../assets/navbar.PNG');
+}
+
+.logo-nav{
+    font-family: 'Silkscreen', cursive;
+}
+
+.navbar{
+    background-position: 110%;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    background: linear-gradient(45deg, rgb(255, 255, 255), rgba(255, 255, 255, 0.3));
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.btn-css {
+    background: inherit;
+    border: none;
+    outline: none;
+    animation: normal;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn-css::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: 0;
+}
+
+.btn-css::after{
+    transform: scale(0, 1);
+    transition: transform 0.4s ease;
+}
+
+.btn-css:hover::after{
+    transform: scale(.5,1);
+}
