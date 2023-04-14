@@ -30,7 +30,7 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
                 <div>
                     {
                         isInCart(id) ? (
-                            <Link to='/cart'>Terminar compra</Link>
+                            <Link className='bg-transparent hover:bg-purple-500 text-white font-semibold hover:text-white py-2 px-4 border border-purple-500 hover:border-transparent rounded' to='/cart'>Terminar compra</Link>
                         ) : (
                             <ItemCount onAdd={handleOnAdd} stock={stock} />
                         )

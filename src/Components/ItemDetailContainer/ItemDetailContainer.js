@@ -1,25 +1,49 @@
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { getProductsById } from "../../asyncMock";
+// import { getProductsById } from "../../asyncMock";
 import { useParams } from "react-router-dom";
 import { IoMdArrowRoundBack } from "react-icons/io";
+import { getDoc, doc } from "firebase/firestore";
+import { db } from "../../services/firebase/firebaseConfig";
 
 const ItemDetailContainer = () => {
     const [products, setProducts] = useState([])
+    // const [loading, setLoading] = useState(true)
 
     const { itemId } = useParams()
 
     useEffect( () => {
-        getProductsById(itemId)
-            .then(response =>{
-                setProducts(response)
-        })
-        .catch(err =>{
-            console.log(err)
-        })
+        // setLoading(true)
+
+        const productRef = doc(db, 'products', itemId)
+
+        getDoc(productRef)
+            .then(snapshot => {
+                const data = snapshot.data()
+                const productAdapted = { id: snapshot.id, ...data }
+                setProducts(productAdapted)
+            })
+            .catch(err =>{
+                console.log(err)
+            })
+
+
+        // getProductsById(itemId)
+        //     .then(response =>{
+        //         setProducts(response)
+        // })
+
 
     }, [itemId])
+
+    // if(loading){
+    //     return (
+    //         <div>
+    //             <h1>Cargando...</h1>
+    //         </div>
+    //     )
+    // }
 
     return(
         <div className="flex justify-center pt-14">

@@ -24,7 +24,7 @@ const Navbar = () => {
     return (
         <header className='fixed top-0 w-screen header h-14 z-50'>
             <nav className="flex justify-evenly items-center bg-transparent h-14 navbar">
-            <Link to='FacundoDominguezReact' className='text-white text-xl logo-nav'>NPC STORE</Link>
+            <Link to='/' className='text-white text-xl logo-nav'>NPC STORE</Link>
                 <div className="justify-center">
                     {/* {
                         categories.map(cat => {

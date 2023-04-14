@@ -1,11 +1,15 @@
 import { useState, createContext, useContext } from 'react'
+import { icons } from 'react-icons'
 
 const Notification = ({ type, message }) => {
     const notificationStyle = {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
       position: 'absolute',
-      top: 100, 
-      right: 50,
-      backgroundColor: type === 'success' ? 'green' : 'red',
+      top: 70, 
+      right: 20,
+      backgroundColor: type === 'success' ? 'rgba(22, 163, 74, 0.4)' : 'rgba(244, 63, 94, 0.4)',
       color: 'white',
       padding: '10px 20px 10px 20px',
       borderRadius: 10
