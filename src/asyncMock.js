@@ -56,7 +56,7 @@ const products = [
   {
     id: "7",
     name: "Memoria Ram G.Skill Trident Z RGB",
-    price: 401,
+    price: 130,
     category: "Componentes",
     img: "https://3.bp.blogspot.com/-NYu0LDSsqRc/Wo7_qx19dLI/AAAAAAAADJU/hMVL7w59kqovMLrJYESfwrHsaZm7595IQCLcBGAs/s1600/01.trident.z.rgb.png",
     stock: 21,
