@@ -2,13 +2,15 @@
     height: 87vh;
     border-radius: 18px;
     background-size: cover;
-    background-image: url('https://media.istockphoto.com/id/690807100/vector/cosmic-galaxy-background-with-nebula-stardust-and-bright-shining-stars-motion-blur-effect.jpg?s=170667a&w=0&k=20&c=dNO7O3kWTDlsoFKuisR32l1OXTeBG9q6ZWbFGwG6lyo=');
+    background-color: #923cb5;
+    background-image: linear-gradient(134deg, #923cb5 0%, #120616 74%);
+    
 }
-
+/* 
 .content{
-    /* backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50%); */
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50%);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 18px;
 
-}
+} */

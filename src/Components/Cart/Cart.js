@@ -1,6 +1,8 @@
 import { useCart } from '../../context/CartContext';
 import './Cart.css'
 import { Link } from 'react-router-dom';
+import { GiCrossMark } from "react-icons/gi";
+
 
 
 const Cart = ({greeting}) => {
@@ -17,15 +19,15 @@ const Cart = ({greeting}) => {
                 {
                     cart.map(prod => {
                         return (
-                            <div className='border-2 border-purple-500 bg-slate-800 text-slate-50 flex justify-between items-center gap-4 px-14 rounded m-4' key={prod.id}>
+                            <div className='border-2 border-purple-500 bg-slate-800 hover:bg-slate-700 text-slate-50 text-lg flex justify-between items-center gap-6 px-32 rounded m-4 h-20' key={prod.id}>
                                 <h2>{prod.name}</h2>
                                 <h2>Cantidad: {prod.quantity}</h2>
                                 <div>
                                     <img src={prod.img} />
                                 </div>
-                                <h2>{prod.price} x unidad</h2>
+                                <h2>US$ {prod.price * prod.quantity}</h2>
                                 <div>
-                                    <button className='bg-fuchsia-700 hover:bg-fuchsia-800 text-white py-3 px-4 rounded-full shadow-md hover:shadow-xl m-4' onClick={() => removeItem(prod.id)}>eliminar</button>
+                                    <GiCrossMark className='text-red-600 hover:text-red-500 text-3xl' onClick={() => removeItem(prod.id)}/>
                                 </div>
                             </div>
                         )
@@ -33,12 +35,12 @@ const Cart = ({greeting}) => {
                 }
             </div>
 
-            <h1 className='text-white text-lg m-3'>Total de la compra: ${total}</h1>
+            <h1 className='text-white text-lg m-3'>Total de la compra: US${total}</h1>
             <button className='bg-fuchsia-700 hover:bg-fuchsia-500 text-white font-semibold hover:text-white py-2 px-4 border border-slate-900 hover:border-transparent rounded m-3' onClick={clearCart}>Vaciar Carrito</button>
             <Link to="/checkout" className='bg-fuchsia-700 hover:bg-fuchsia-500 text-white font-semibold hover:text-white py-2 px-4 border border-slate-900 hover:border-transparent rounded m-3'>Checkout</Link>
         </div>
         
-
+            
         
     )
 }

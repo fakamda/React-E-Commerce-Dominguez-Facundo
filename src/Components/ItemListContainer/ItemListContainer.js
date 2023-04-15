@@ -7,6 +7,7 @@ import ItemList from "../ItemList/ItemList"
 // import { db } from '../../services/firebase/firebaseConfig'
 import { getProducts } from '../../services/firebase/firestore/products'
 import { useAsync } from '../../hooks/useAsync'
+import Loader from '../Loader/Loader'
 
 
 const ItemListContainer = ({ greeting }) => {
@@ -72,17 +73,17 @@ const ItemListContainer = ({ greeting }) => {
         // })
    
 
-  if(loading) {
+    if(loading) {
         return (
-            <div>
-                <h1>Cargando...</h1>
+            <div className='m-auto pt-44 text-4xl text-white'>
+                <Loader/>
             </div>
         )
     }
 
     if(error) {
         return (
-            <div>
+            <div className='m-auto pt-44 text-4xl text-white'>
                 <h1>Hubo un error</h1>
             </div>
         )

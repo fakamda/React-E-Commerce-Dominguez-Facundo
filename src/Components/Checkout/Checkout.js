@@ -89,9 +89,9 @@ const Checkout = () => {
     }
 
   return (
-    <div className='pt-24 flex justify-center items-center'>
+    <div className='pt-24 flex justify-center items-center flex-col'>
         <h1 className='text-xl text-white bg-purple-800'></h1>
-        <h2>ingrese Sus Datos</h2>
+        <h2 className='text-white text-xl'>ingrese Sus Datos</h2>
         <ContactForm onConfirm={createOrder}/>
     </div>
   )
