@@ -12,10 +12,10 @@ const Item = ({id, name, img, price, description }) => {
 
 
     return (
-        <div>
-        <div onClick={handleClick} className=" bg-slate-800 bg-opacity-80 flex justify-between items-center flex-col item rounded-md z-10">
-            <div className=" rounded-t-md">
+        <div onClick={handleClick} className=" bg-slate-800 bg-opacity-80 flex justify-between items-center flex-col item rounded-md z-10 image">
+            <div className=" rounded-t-md image-wrapper">
                 <img src={img} alt={name} className="rounded-t-md"/>
+                <div className='gradient'></div>
             </div>
             <div className='w-72 h-32'>
                 <h3 className='font-bold text-md mt-2'>{name}</h3>
@@ -25,7 +25,6 @@ const Item = ({id, name, img, price, description }) => {
             <div className='mb-5'>
                 <Link to={`/item/${id}`} className='bg-fuchsia-700 hover:bg-fuchsia-800 text-white py-3 px-4 rounded-full shadow-md hover:shadow-xl'>Ver Detalles</Link>
             </div>
-        </div>
         </div>
     )
 }

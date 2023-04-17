@@ -8,6 +8,10 @@ import { GiCrossMark } from "react-icons/gi";
 const Cart = ({greeting, img}) => {
     const { cart, removeItem, total } = useCart();
     const { clearCart } = useCart();
+
+    // const totalCart = () => {
+    //     total !== 0 ? `El total de la compra es ${total}` : `Todavia no has comprado nada!`
+    // }
  
 
 
@@ -34,7 +38,7 @@ const Cart = ({greeting, img}) => {
                 }
             </div>
 
-            <h1 className='text-white text-lg m-3 font-semibold'>Total de la compra: US${total}</h1>
+            <h1 className='text-white text-lg m-3 font-semibold'>{total !== 0 ? `El total de la compra es US$${total}` : `Todavia no has comprado nada!`}</h1>
             <button className='bg-fuchsia-700 hover:bg-fuchsia-500 text-white font-semibold hover:text-white py-2 px-4 hover:border-transparent rounded m-3' onClick={clearCart}>Vaciar Carrito</button>
             <Link to="/checkout" className='bg-fuchsia-700 hover:bg-fuchsia-500 text-white font-semibold hover:text-white py-2 px-4 rounded m-3'>Checkout</Link>
         </div>
