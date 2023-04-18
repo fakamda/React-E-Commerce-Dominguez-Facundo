@@ -17,62 +17,7 @@ const ItemListContainer = ({ greeting }) => {
 
     const { data: products, error, loading} = useAsync(getProductsWithCategory, [categoryId])
 
-
-
-    // const [products, setProducts] = useState([])
-    // const [loading, setLoading] = useState(true) 
-
-    // useEffect(() => {
-    //     setLoading(true)
-
-    //     getProducts(categoryId)
-    //     .then(products => {
-    //         setProducts(products)
-    //     })
-    //     .catch(error =>{
-    //         console.log(error)
-    //     })
-    //     .finally(()=>{
-    //         setLoading(false)
-    //     })
-
-    // }, [categoryId])
-
-    //     const productsRef = categoryId 
-        
-    //    ? query(collection(db, 'products'), where('category', '==', categoryId))
-    //    : collection(db, 'products')
-
-    //     getDocs(productsRef)
-    //     .then(snapshot => {
-    //         const productsAdapted = snapshot.docs.map(doc => {
-    //             const data = doc.data()
-
-    //             return { id: doc.id, ...data }
-    //         })
-
-    //         setProducts(productsAdapted)
-
-    //     }).catch(err =>{
-    //         console.log(err)
-    //     }).finally(() =>{
-    //         setLoading(false)
-    //     })
-
-        // const asyncFunction = categoryId ? getProductsByCategory : getProducts
-
-        // asyncFunction(categoryId)
-        //     .then(products => {
-        //         setProducts(products)
-        // })
-        //     .catch(err => {
-        //         console.log(err)
-        // })
-        //     .finally(() => {
-        //         setLoading(false)
-        // })
-   
-
+    
     if(loading) {
         return (
             <div className='m-auto pt-44 text-4xl text-white'>
