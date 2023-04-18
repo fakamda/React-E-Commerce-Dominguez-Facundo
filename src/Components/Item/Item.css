@@ -15,6 +15,7 @@
 }
 
 .item img {
+    overflow: hidden;
     height: 290px;
     width: 300px;
     object-fit: contain;
@@ -23,6 +24,7 @@
 
 .image {
   perspective: 1000px;
+  overflow: hidden;
   perspective-origin: center top;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -38,7 +40,8 @@
   transition: transform 0.3s ease-in-out;
 }
 .image .image-wrapper:hover {
-  transform: rotateX(10deg);
+  transform: scale(1.03);
+
 }
 .image .image-wrapper:hover .gradient {
   height: 100%;
@@ -50,6 +53,7 @@
   top: 0;
   left: 0;
   z-index: 1;
+  object-fit: cover;
   transform: rotate(30deg);
   transform-origin: top right;
   width: 200%;

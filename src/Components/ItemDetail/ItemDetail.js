@@ -20,6 +20,12 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
 
     return (
         <div className=" bg-slate-800 text-white flex justify-between items-center flex-row-reverse itemDetail">
+            {
+                stock === 0 
+                ? <span class="bg-pink-100 text-purple-pink text-xs font-medium mr-2 px-10 py-2 rounded dark:bg-gray-700 dark:text-pink-500 border border-pink-500 absolute z-10 -translate-y-64">SIN STOCK</span> 
+                : ''
+            }
+            
             <img src={img} alt={name}/>
             <div className='flex flex-col justify-evenly m-auto gap-6'>
                 <h4 className='text-xl'>{name}</h4>
