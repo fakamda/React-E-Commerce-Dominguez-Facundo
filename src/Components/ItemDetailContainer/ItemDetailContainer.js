@@ -9,12 +9,12 @@ import { db } from "../../services/firebase/firebaseConfig";
 
 const ItemDetailContainer = () => {
     const [products, setProducts] = useState([])
-    // const [loading, setLoading] = useState(true)
+
 
     const { itemId } = useParams()
 
     useEffect( () => {
-        // setLoading(true)
+
 
         const productRef = doc(db, 'products', itemId)
 
@@ -29,21 +29,7 @@ const ItemDetailContainer = () => {
             })
 
 
-        // getProductsById(itemId)
-        //     .then(response =>{
-        //         setProducts(response)
-        // })
-
-
     }, [itemId])
-
-    // if(loading){
-    //     return (
-    //         <div>
-    //             <h1>Cargando...</h1>
-    //         </div>
-    //     )
-    // }
 
     return(
         <div className="flex justify-center pt-14">
