@@ -1,10 +1,6 @@
 import './ItemListContainer.css'
-// import { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom'
-// import { getProducts, getProductsByCategory } from "../../asyncMock"
 import ItemList from "../ItemList/ItemList"
-// import { collection, getDocs, query, where } from 'firebase/firestore'
-// import { db } from '../../services/firebase/firebaseConfig'
 import { getProducts } from '../../services/firebase/firestore/products'
 import { useAsync } from '../../hooks/useAsync'
 import Loader from '../Loader/Loader'

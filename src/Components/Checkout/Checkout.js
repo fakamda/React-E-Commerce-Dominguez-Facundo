@@ -55,13 +55,13 @@ const Checkout = () => {
                 const ordersRef = collection(db, 'orders')
     
                 const orderAdded = await addDoc(ordersRef, objOrder)
-                
+
                 clearCart()
                 setOrderId(orderAdded.id)
 
                 setTimeout(() => {
                     navigate('/')
-                }, 5000)
+                }, 10000)
             } else {
                 setNotification('error', 'Hay productos que no tienen stock', 10)
             }
@@ -84,7 +84,7 @@ const Checkout = () => {
 
     if(orderId) {
         return (
-            <div>
+            <div className='m-auto pt-44 text-4xl text-white'>
                 <h1 className='text-white text-2xl'>EL ID DE TU COMPRA ES EL: {orderId}</h1>
             </div>
         )
