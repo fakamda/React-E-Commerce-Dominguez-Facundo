@@ -49,13 +49,14 @@ npx tailwindcss init
 - Copia las credenciales de tu proyecto de Firebase y pégalo en el archivo firebaseConfig.js que esta dentro de la carpeta de servicios.
 - Crea un archivo .env en la carpeta raíz del proyecto y define las siguientes variables de entorno:
 
+```sh
 REACT_APP_FIREBASE_API_KEY=<API_KEY>
 REACT_APP_FIREBASE_AUTH_DOMAIN=<AUTH_DOMAIN>
 REACT_APP_FIREBASE_PROJECT_ID=<PROJECT_ID>
 REACT_APP_FIREBASE_STORAGE_BUCKET=<STORAGE_BUCKET>
 REACT_APP_FIREBASE_MESSAGING_SENDER_ID=<MESSAGING_SENDER_ID>
 REACT_APP_FIREBASE_APP_ID=<APP_ID>
-
+```
 
 
 - Ejecuta el comando npm start para iniciar el servidor local y ver el proyecto en tu navegador
