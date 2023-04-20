@@ -10,7 +10,20 @@ export const CartProvider = ({ children }) => {
         if(!isInCart(productToAdd.id)) {
             setCart(prev => [...prev, productToAdd])
         } else {
-            console.log('Ya se encuentra en el carrito')
+            const cartUpdated = cart.map(prod => {
+                if(prod.id === productToAdd.id) {
+                    const productUpdated = {
+                        ...prod,
+                        quantity: productToAdd.quantity
+                    }
+
+                    return productUpdated
+                } else {
+                    return prod
+                }
+            })
+
+            setCart(cartUpdated)
         }
     }
 
@@ -20,6 +33,7 @@ export const CartProvider = ({ children }) => {
 
     const removeItem = (id) => {
         const updatedCart = cart.filter(prod => prod.id !== id)
+        console.log(updatedCart)
         setCart(updatedCart)
     }
     

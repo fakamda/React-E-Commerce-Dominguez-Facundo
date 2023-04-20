@@ -9,15 +9,9 @@ const Cart = ({greeting, img}) => {
     const { cart, removeItem, total } = useCart();
     const { clearCart } = useCart();
 
-    // const totalCart = () => {
-    //     total !== 0 ? `El total de la compra es ${total}` : `Todavia no has comprado nada!`
-    // }
- 
-
-
     return (
         <div className='flex flex-col m-20 pt-14 justify-center items-center content back backdrop-blur-2xl'>
-            <h1 className='text-white text-2xl mb-14'>{greeting}</h1>
+            <h1 className='text-white text-2xl relative bottom-80'>{greeting}</h1>
             <div>
                 {
                     cart.map(prod => {

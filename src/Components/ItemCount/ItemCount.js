@@ -17,7 +17,7 @@ const ItemCount = ({stock = 0, initial = 1, onAdd})=> {
  
     return(
         <div className=''>          
-             <div className='flex justify-center mb-4'>
+             <div className='flex justify-center mb-5'>
                  <button className="bg-purple-700 py-1 px-2 rounded-l-md hover:bg-purple-500" onClick={decrement}>-</button>
                  <h4 className='bg-white text-black font-medium py-1 px-2'>{quantity}</h4>
                  <button className="bg-purple-700 py-1 px-2 rounded-r-md hover:bg-purple-500" onClick={increment}>+</button>
