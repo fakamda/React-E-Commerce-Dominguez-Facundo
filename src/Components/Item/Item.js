@@ -3,9 +3,8 @@ import { Link } from 'react-router-dom'
 
 
 const handleClick = (e) => {
-    e.preventDefault() // para prevenir el comportamiento por defecto
-    e.stopPropagation() // para parar la propagacion del evento
-    console.log('item')
+    e.preventDefault() 
+    e.stopPropagation() 
 }
 
 const Item = ({id, name, img, price, description, stock }) => {

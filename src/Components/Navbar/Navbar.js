@@ -26,16 +26,16 @@ const Navbar = () => {
             <nav className="flex justify-evenly items-center bg-transparent h-14 navbar">
             <Link to='/' className='text-white text-xl logo-nav'>NPC STORE</Link>
                 <div className="justify-center">
-                <NavLink to='/products' className="btn-css bg-transparent text-white font-semibold hover:text-gray-200 py-2 px-4 mr-2 w-34" >Inicio</NavLink>
-                    {
-                        categories.map(cat => {
-                            return (
-                                <NavLink key={cat.id} to={`/category/${cat.slug}`} className="btn-css bg-transparent text-white font-semibold hover:text-gray-200 py-2 px-4 mr-2 w-34">{cat.label}</NavLink>
-                            )
-                        })
-                    }
+                    <NavLink to='/products' className="btn-css bg-transparent text-white font-semibold hover:text-gray-200 py-2 px-4 mr-2 w-34" >Inicio</NavLink>
+                        {
+                            categories.map(cat => {
+                                return (
+                                    <NavLink key={cat.id} to={`/category/${cat.slug}`} className="btn-css bg-transparent text-white font-semibold hover:text-gray-200 py-2 px-4 mr-2 w-34">{cat.label}</NavLink>
+                                )
+                            })
+                        }
                 </div>
-            <CartWidget/>
+                <CartWidget/>
             </nav>
         </header>
 

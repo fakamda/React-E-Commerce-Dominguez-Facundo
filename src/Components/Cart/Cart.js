@@ -11,7 +11,7 @@ const Cart = ({greeting, img}) => {
 
     return (
         <div className='flex flex-col m-20 pt-14 justify-center items-center content back backdrop-blur-2xl'>
-            <h1 className='text-white text-2xl relative bottom-80'>{greeting}</h1>
+            <h1 className='text-white text-2xl relative bottom-60'>{greeting}</h1>
             <div>
                 {
                     cart.map(prod => {
@@ -34,7 +34,7 @@ const Cart = ({greeting, img}) => {
 
             <h1 className='text-white text-lg m-3 font-semibold'>{total !== 0 ? `El total de la compra es US$${total}` : `Todavia no has comprado nada!`}</h1>
             <button className='bg-fuchsia-700 hover:bg-fuchsia-500 text-white font-semibold hover:text-white py-2 px-4 hover:border-transparent rounded m-3' onClick={clearCart}>Vaciar Carrito</button>
-            <Link to="/checkout" className='bg-fuchsia-700 hover:bg-fuchsia-500 text-white font-semibold hover:text-white py-2 px-4 rounded m-3'>Checkout</Link>
+            <Link to="/checkout" className='bg-fuchsia-700 hover:bg-fuchsia-500 text-white font-semibold hover:text-white py-2 px-4 rounded m-3'>Finalizar Compra</Link>
         </div>
         
             

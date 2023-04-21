@@ -4,7 +4,7 @@ const CartContext = createContext('valor inicial')
 
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([])
-    console.log(cart)
+
 
     const addItem = (productToAdd) => {
         if(!isInCart(productToAdd.id)) {
@@ -33,7 +33,6 @@ export const CartProvider = ({ children }) => {
 
     const removeItem = (id) => {
         const updatedCart = cart.filter(prod => prod.id !== id)
-        console.log(updatedCart)
         setCart(updatedCart)
     }
     

@@ -9,7 +9,6 @@ export const getProducts = (categoryId) => {
 
         return getDocs(productsRef)
             .then(snapshot => {
-                console.log(snapshot)
                 const productsAdapted = snapshot.docs.map(doc => {
                     return createAdaptedProductFromFirestore(doc)
                 })

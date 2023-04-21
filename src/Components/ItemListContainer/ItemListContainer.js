@@ -31,7 +31,7 @@ const ItemListContainer = ({ greeting }) => {
     }
 
     return (
-        <div onClick={(e) => console.log('item list container')} className="text-white m-4 pt-14">
+        <div className="text-white m-4 pt-14">
             <h1 className="text-xl mt-2">{greeting}</h1>
             <div className="flex justify-around items-center flex-row glass">
                 <div className='cont'>
