@@ -11,7 +11,7 @@ const Cart = ({greeting, img}) => {
 
     return (
         <div className='flex flex-col m-20 pt-14 justify-center items-center content back backdrop-blur-2xl'>
-            <h1 className='text-white text-2xl relative bottom-60'>{greeting}</h1>
+            <h1 className='text-white text-2xl relative bottom-52'>{greeting}</h1>
             <div>
                 {
                     cart.map(prod => {
